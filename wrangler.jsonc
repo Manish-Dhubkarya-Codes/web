@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "vuinn-web",
+  "compatibility_date": "2026-11-18",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  // Read at runtime by lib/server/auth.ts (apiBaseUrl). Public URL, not a secret.
+  "vars": {
+    "API_BASE_URL": "https://api.vuinn.com/api/v1/",
+    "NEXT_PUBLIC_API_BASE_URL": "https://api.vuinn.com/api/v1/"
+  },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
